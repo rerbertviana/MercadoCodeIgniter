@@ -5,9 +5,10 @@ class Produtos extends CI_Controller {
 
     function __construct(){
         parent::__construct();
+        $this->load->model("produtos_model");
     }
 	
 	public function index() {
-		echo 'Testando CI';
+		$this->produtos_model->buscarprodutos();
 	}
 }
