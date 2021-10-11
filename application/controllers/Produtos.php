@@ -9,6 +9,8 @@ class Produtos extends CI_Controller {
     }
 	
 	public function index() {
-		$this->produtos_model->buscarprodutos();
+		$lista = $this->produtos_model->buscarprodutos();
+        $dados = array("produtos" => $lista);
+        $this->load->view('produtos/index', $dados);
 	}
 }
