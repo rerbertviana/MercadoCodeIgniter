@@ -29,17 +29,27 @@
             </table>
         </div>
         <div>
-            <h1>CADASTRAR PRODUTOS</h1>
-            <?php
-            echo form_open(action:"");
+            <h1 class="tab">CADASTRAR PRODUTOS</h1>
+            <form action="index.php/produtos/novo">
+                <div class="row mb-3 tab">
+                    <div class="col linha ">
+                        <label for="nome" class="form-label espaco"> Nome </label>
+                        <input type="text" class="form-control" id="nome" name="nome"> 
+                    </div> 
+                    <div class="col linha">
+                        <label for="preco" class="form-label espaco"> Preço </label>
+                        <input type="text" class="form-control" id="preco" name="preco"> 
+                    </div> 
+                    <div class="col linha">
+                        <label for="quantidade" class="form-label espaco"> Quantidade </label>
+                        <input type="text" class="form-control" id="quantidade" name="quantidade"> 
+                    </div> 
+                    <div class="col linha">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
                 
-                echo form_input(array (
-                    "name" => "nome",
-                    "" => 
-                ));
-                
-            echo form_close();
-            ?>
+            </form>
         </div>
         <style>
             .tab {
@@ -49,6 +59,16 @@
             .titulo {
                 display: flex;
                 justify-content: center;
+            }
+
+            .linha {
+                display: flex;
+                align-items: center;
+               
+            }
+
+            .espaco {
+                margin-right: 10px;
             }
         </style>
     </body>
