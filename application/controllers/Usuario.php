@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Produtos extends CI_Controller
+class Usuario extends CI_Controller
 {
 
     function __construct()
@@ -12,32 +12,16 @@ class Produtos extends CI_Controller
 
     public function index()
     {
-       
         if ($this->input->post("busca")) {
             $dados = $this->filtrar();
-        } else {
+        }
+        else {
             $lista = $this->produtos_model->buscarprodutos();
             $dados = array("produtos" => $lista);
         }
 
-        $this->load->view('produtos/index', $dados);
-    }
-
-    public function novo()
-    {
-
-        $nome = $this->input->post("nome");
-        $preco = $this->input->post("preco");
-        $quantidade = $this->input->post("quantidade");
-
-        $produto = array(
-            "nome" => $nome,
-            "preco" => $preco,
-            "quantidade" => $quantidade
-        );
-
-        $this->produtos_model->salvar($produto);
-        redirect(base_url());
+        $this->load->view('usuario/index', $dados);
+        
     }
 
     public function filtrar()
