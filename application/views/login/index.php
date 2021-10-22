@@ -40,54 +40,55 @@
             </form>
         </div>
     </div>
-    <style>
-        .login {
-            display: flex;
-            flex-direction: column;
-            margin: 15px;
-            padding: 40px;
-            border-radius: 10px;
-            height: 620px;
-            width: 400px;
-            background-color: white;
-            box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
-        }
-
-        .center {
-            display: flex;
-            height: 100%;
-            justify-content: center;
-            background-color: gray;
-        }
-
-        .logo {
-            width: 280px;
-            height: 90px;
-        }
-
-        .pereira {
-            margin-top: 120px;
-            margin-bottom: 70px;
-            display: flex;
-            justify-content: center;
-            opacity: none;
-        }
-
-        .email {
-            background-color: blue;
-            border-radius: 3px;
-        }
-
-        .entrar {
-            margin-left: 2px;
-            color: red;
-        }
-
-        .botao {
-            display: flex;
-            justify-content: flex-end;
-        }
-    </style>
 </body>
+
+<style>
+    .login {
+        display: flex;
+        flex-direction: column;
+        margin: 15px;
+        padding: 40px;
+        border-radius: 10px;
+        height: 620px;
+        width: 400px;
+        background-color: white;
+        box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .center {
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        background-color: gray;
+    }
+
+    .logo {
+        width: 280px;
+        height: 90px;
+    }
+
+    .pereira {
+        margin-top: 120px;
+        margin-bottom: 70px;
+        display: flex;
+        justify-content: center;
+        opacity: none;
+    }
+
+    .email {
+        background-color: blue;
+        border-radius: 3px;
+    }
+
+    .entrar {
+        margin-left: 2px;
+        color: red;
+    }
+
+    .botao {
+        display: flex;
+        justify-content: flex-end;
+    }
+</style>
 
 </html>

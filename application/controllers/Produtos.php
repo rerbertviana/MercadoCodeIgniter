@@ -4,7 +4,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Produtos extends CI_Controller
 {
 
-
     function __construct()
     {
         parent::__construct();
@@ -30,7 +29,6 @@ class Produtos extends CI_Controller
             }
 
             $dados['produtos'] = $lista;
-            
         }
         $this->load->view('produtos/index', $dados);
     }
@@ -70,5 +68,18 @@ class Produtos extends CI_Controller
         $dados['mensagens'] = '';
 
         return $dados;
+    }
+
+    public function delete($id)
+    {
+        $this->produtos_model->deletar($id);
+        redirect(base_url('index.php/produtos'));
+    }
+
+    public function editar()
+    {
+        $id = $this->input->get("id");
+        $produto = $this->produtos_model->editar($id);
+        $dados = array("produto" => $produto);
     }
 }
