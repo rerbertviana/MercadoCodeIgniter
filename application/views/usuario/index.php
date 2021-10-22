@@ -9,6 +9,9 @@
 
 <body>
     <div class="caixa">
+    <div class="fechar tab">
+            <a href="login/logout" class="b1"><i class="fas fa-sign-out-alt espaco2"></i>SAIR</a>
+        </div>
         <div class="row tab produto">
             <div class="col-12 produto">
                 <span>SUPERMERCADO MOREIRA</span>
@@ -135,6 +138,27 @@
 
         .espaco2 {
             margin-right: 10px;
+        }
+
+        .b1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 35px;
+            background-color: gray;
+            color: white;
+            border-radius: 3px;
+            text-decoration: none;
+        }
+
+        .fechar {
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        .b1:hover {
+            color: white;
         }
     </style>
     </div>

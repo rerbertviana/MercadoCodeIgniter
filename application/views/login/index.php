@@ -15,7 +15,7 @@
                     <img src=<?= base_url("assets/images/pereira.png") ?> class="img-fluid">
                 </div>
             </div>
-            <form action="login/autenticar" method="post">
+            <form action="index.php/login/autenticar" method="post">
                 <div class="row mb-3">
                     <div class="col-12"> <span class="entrar">LOGIN</span></div>
                 </div>

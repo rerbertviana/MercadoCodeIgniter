@@ -23,16 +23,22 @@ class Login extends CI_Controller
         $usuario = $this->usuario_model->logarUsuarios($email, $senha);
 
         if ($usuario) {
-            $this->session->set_userdata("usuario logado", $usuario);
-            if ($this->session->userdata['usuario logado']['tipo'] == 'adm'){
-                redirect(base_url());
+            $this->session->set_userdata("logado", $usuario);
+            if ($this->session->userdata['logado']['tipo'] == 'adm'){
+                redirect(base_url('index.php/produtos'));
             }
             else {
                 redirect('usuario');
             }
         } else {
             $this->session->set_flashdata("danger", "Usuário ou senha inválidos!");
-            redirect(base_url('index.php/login'));
+            redirect(base_url());
         }
+    }
+
+    public function logout()
+    {
+      $this->session->unset_userdata("logado");
+      redirect(base_url());
     }
 }
