@@ -41,7 +41,7 @@
                 <div class="col-3 ">
                     <input type="text" class="form-control" id="quantidade" name="quantidade" placeholder="Quantidade">
                 </div>
-                <div class="col-1 ">
+                <div class="col-1 cad">
                     <button type="submit" class="btn btn-primary">Cadastrar</button>
                 </div>
             </div>
@@ -218,7 +218,6 @@
     }
 
     .bdelete {
-        margin-bottom: 10px;
         margin-right: 10px;
         display: flex;
         align-items: center;
@@ -226,10 +225,10 @@
         background-color: orange;
         color: white;
         height: 40px;
+        width: 75px;
         text-decoration: none;
         border-radius: 5px;
         padding: 6px;
-       
     }
 
     .bdelete2 {
@@ -238,6 +237,7 @@
         justify-content: center;
         background-color: rgba(255, 67, 67, 1);
         height: 40px;
+        width: 75px;
         color: white;
         text-decoration: none;
         border-radius: 5px;
@@ -254,6 +254,11 @@
 
     .t {
         margin-left: 4px;
+    }
+
+    .cad {
+        display: flex;
+        justify-content: center;
     }
 </style>
 
